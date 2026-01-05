@@ -12,7 +12,7 @@ number:
     min_value: 0
     max_value: 100
     step: 1
-    initial_value: 33  # ← CHANGED FROM 50 TO 33
+    initial_value: 100
     restore_value: yes
     optimistic: true
     on_value:
