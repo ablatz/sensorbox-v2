@@ -328,7 +328,7 @@ display:
 
       // --- CLOCK DISPLAY (ONLY ON PAGE 0) ---
       if (id (page_number) == 0) {
-        if (id(esptime).now().isvalid()) {
+        if (id(esptime).now().is_valid()) {
             auto time = id(esptime).now();
             char time_buf[6];  
             char date_buf[11]; 
@@ -339,7 +339,7 @@ display:
             it.print(w - 5, h - 5, fl18, id(grey), TextAlign::BOTTOM_RIGHT, date_buf);
         } else {
           // optional: show placeholder until time is synced
-          it.print(w - 5, h - 25, f125, id(light_grey), TextAlign: :BOTTOM_RIGHT, "--:--");
+          it.print(w - 5, h - 25, fl25, id(light_grey), TextAlign::BOTTOM_RIGHT, "--:--");
         }
       }
 
