@@ -316,9 +316,7 @@ display:
       // --- WIFI STATUS INDICATOR (ONLY ON PAGE 0) ---
       if (id(page_number) == 0) {
         bool wifi_connected = false;
-        #ifdef USE_WIFI
-        wifi_connected = (WiFi.status() == WL_CONNECTED);
-        #endif
+        wifi_connected = id(wifi_id).is_connected();
         
         int wifi_circle_x = 6;
         int wifi_circle_y = 16;
@@ -328,13 +326,9 @@ display:
         it.filled_circle(wifi_circle_x, wifi_circle_y, wifi_circle_radius, wifi_color);
       }
 
-      // --- CLOCK DISPLAY (ONLY ON PAGE 0 WITH WIFI) ---
-      if (id(page_number) == 0) {
-        #ifdef USE_WIFI
-        if (WiFi.status() == WL_CONNECTED && id(esptime).now().is_valid()) {
-        #else
-        if (id(esptime).now().is_valid()) {
-        #endif
+      // --- CLOCK DISPLAY (ONLY ON PAGE 0) ---
+      if (id (page_number) == 0) {
+        if (id(esptime).now().isvalid()) {
             auto time = id(esptime).now();
             char time_buf[6];  
             char date_buf[11]; 
@@ -343,6 +337,9 @@ display:
             
             it.print(w - 5, h - 25, fl25, id(white), TextAlign::BOTTOM_RIGHT, time_buf);
             it.print(w - 5, h - 5, fl18, id(grey), TextAlign::BOTTOM_RIGHT, date_buf);
+        } else {
+          // optional: show placeholder until time is synced
+          it.print(w - 5, h - 25, f125, id(light_grey), TextAlign: :BOTTOM_RIGHT, "--:--");
         }
       }
 
