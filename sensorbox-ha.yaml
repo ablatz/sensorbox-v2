@@ -1,0 +1,19 @@
+# Sensorbox V2 HA
+
+substitutions:
+  # Naming
+  name: sensorbox-2
+  friendly_name: Sensorbox V2
+  # Display orientation options and color order, see https://esphome.io/components/display/ili9xxx/#configuration-variables
+  display_mirror_x: false
+  display_mirror_y: false
+  display_swap_xy: true
+  display_color_order: rgb
+
+packages:
+  commons: !include packages/commons.yaml
+  globals: !include packages/globals.yaml
+  wifi: !include packages/wifi.yaml
+  sensors: !include packages/sensors.yaml
+  interfaces: !include packages/interfaces.yaml
+  display: !include packages/display_package.yaml

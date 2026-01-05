@@ -1,0 +1,170 @@
+graph:
+  # Show bare-minimum auto-ranged graph
+  - id: temperature_graph
+    duration: 1h
+    x_grid: 10min
+    width: 151
+    height: 51
+    max_range: 30
+    min_range: 15
+    max_value: 30
+    min_value: 15
+    traces:
+      - sensor: temperature
+        line_type: SOLID
+        color: blue
+  - id: humidity_graph
+    duration: 1h
+    x_grid: 10min
+    width: 151
+    height: 51
+    max_range: 100
+    min_range: 1
+    max_value: 100
+    min_value: 1
+    traces:
+      - sensor: humidity
+        line_type: SOLID
+        color: green
+  - id: pressure_graph
+    duration: 1h
+    x_grid: 10min
+    width: 151
+    height: 51
+    max_range: 100
+    min_range: 1
+    max_value: 1050
+    min_value: 950
+    traces:
+      - sensor: pres_bmp280
+        line_type: SOLID
+        color: magenta
+  - id: co2_graph
+    duration: 1h
+    x_grid: 10min
+    width: 151
+    height: 51
+    max_range: 3000
+    min_range: 1
+    max_value: 3000
+    min_value: 1
+    traces:
+      - sensor: co2_scd40
+        line_type: SOLID
+        color: cyan
+  - id: voc_graph
+    duration: 1h
+    x_grid: 10min
+    width: 151
+    height: 51
+    max_range: 1000
+    min_range: 1
+    max_value: 1000
+    min_value: 1
+    traces:
+      - sensor: tvoc_sgp30
+        line_type: SOLID
+        color: orange
+  - id: particles_graph
+    duration: 1h
+    x_grid: 10min
+    width: 151
+    height: 51
+    max_range: 50
+    min_range: 1
+    max_value: 50
+    min_value: 0
+    traces:
+      - sensor: pm1_pms
+        line_type: SOLID
+        color: red
+      - sensor: pm25_pms
+        line_type: SOLID
+        color: orange
+      - sensor: pm10_pms
+        line_type: SOLID
+        color: yellow
+  - id: temperature_graph_24h
+    duration: 24h
+    x_grid: 4h
+    width: 151
+    height: 51
+    max_range: 30
+    min_range: 15
+    max_value: 30
+    min_value: 15
+    traces:
+      - sensor: temperature
+        line_type: SOLID
+        color: blue
+  - id: humidity_graph_24h
+    duration: 24h
+    x_grid: 4h
+    width: 151
+    height: 51
+    max_range: 100
+    min_range: 1
+    max_value: 100
+    min_value: 1
+    traces:
+      - sensor: humidity
+        line_type: SOLID
+        color: green
+  - id: pressure_graph_24h
+    duration: 24h
+    x_grid: 4h
+    width: 151
+    height: 51
+    max_range: 100
+    min_range: 1
+    max_value: 1050
+    min_value: 950
+    traces:
+      - sensor: pres_bmp280
+        line_type: SOLID
+        color: magenta
+  - id: co2_graph_24h
+    duration: 24h
+    x_grid: 4h
+    width: 151
+    height: 51
+    max_range: 3000
+    min_range: 1
+    max_value: 3000
+    min_value: 1
+    traces:
+      - sensor: co2_scd40
+        line_type: SOLID
+        color: cyan
+  - id: voc_graph_24h
+    duration: 24h
+    x_grid: 4h
+    width: 151
+    height: 51
+    max_range: 1000
+    min_range: 1
+    max_value: 1000
+    min_value: 1
+    traces:
+      - sensor: tvoc_sgp30
+        line_type: SOLID
+        color: orange
+  - id: particles_graph_24h
+    duration: 24h
+    x_grid: 4h
+    width: 151
+    height: 51
+    max_range: 50
+    min_range: 1
+    max_value: 50
+    min_value: 0
+    traces:
+      - sensor: pm1_pms
+        line_type: SOLID
+        color: red
+      - sensor: pm25_pms
+        line_type: SOLID
+        color: orange
+      - sensor: pm10_pms
+        line_type: SOLID
+        color: yellow
